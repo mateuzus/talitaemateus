@@ -1,0 +1,18 @@
+<nav>
+    <h1>Talita e Mateus</h1>
+    <div class="line"></div>
+    <svg (click)="toggleMenu()" viewBox="0 0 100 80" width="30" height="20">
+      <rect width="100" height="15"></rect>
+      <rect y="30" width="100" height="15"></rect>
+      <rect y="60" width="100" height="15"></rect>
+    </svg>
+    <ul [ngClass]="{'show': showMenu}">
+        <li (click)="navigateId('inicio')">Inicio</li>
+        <li (click)="navigateId('historia')">História</li>
+        <li (click)="navigateId('countdown')" >Quando?</li>
+        <li (click)="navigateId('rsvp')">RSVP</li>
+        <li (click)="navigateId('presente')">Presentes</li>
+    </ul>
+    <div class="line"></div>
+    <p [ngClass]="{'show': showMenu}">Feito por Mateus Marcelino<span>&copy;</span></p>
+</nav>

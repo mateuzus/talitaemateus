@@ -1,0 +1,51 @@
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            font-family: 'josefin sans';
+            width: 90%;
+            margin: auto;
+        }
+        
+        .container h2 {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .countdown {
+            margin-top: 20px;
+        }
+        
+        .countdown div {
+            display: inline-block;
+            margin-left: 0.3em;
+            font-size: 4rem;
+            font-weight: 200;
+            line-height: 1;
+            text-align: right;
+        }
+        
+        .countdown div:first-child {
+            margin-left: 0;
+        }
+        
+        .countdown div span {
+            display: block;
+            border-top: 1px solid #cecece;
+            padding-top: 3px;
+            font-size: 1rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+
+        @media screen and (max-width: 470px){
+        .countdown div {
+            font-size: 3em
+        }
+        .countdown div span{
+            font-size: 0.9rem
+        }
+    }

@@ -1,0 +1,42 @@
+<form [formGroup]="formPresenca" (ngSubmit)="enviarConfirmacao($event)">
+  <div class="info">
+    <h1>RSVP</h1>
+    <h1>Talita e Mateus</h1>
+    <p class="line">_________________________________</p>
+    <h2>Detalhes</h2>
+    <p>Sábado, 08 de Julho, 2023</p>
+    <p>19:00 HR</p>
+    <br />
+    <h2>Cerimonia</h2>
+    <p>Igreja Nossa Senhora das Graças</p>
+    <p>R. Vig. Martiniano, 288 - Centro, Guaratinguetá - SP, 12501-060</p>
+    <h2>Recepção</h2>
+    <p>Estr. Césare Zangrande, 2161 - Chácara São Dimas, Guaratinguetá - SP, 12513-280</p>
+    <p class="line">_________________________________</p>
+    <div *ngIf="loading;then loading_animation else no_loading"></div>
+    <ng-template #no_loading>
+      <div *ngIf="mensagemText;then mensagem else form_presenca"></div>
+    </ng-template>
+    <ng-template #mensagem>
+      <h1>{{mensagemText}}</h1>
+    </ng-template>
+    <ng-template #form_presenca>
+      <input type="text" formControlName="nome" placeholder="Nome">
+      <p class="error-message" *ngIf="error && formPresenca.invalid">*Nome obrigatório</p>
+      <div class="checkbox">
+        <input type="checkbox" formControlName="familia" id="check" />
+        <label class="label-check" for="check">
+          <svg viewBox="0,0,50,50">
+            <path d="M5 30 L 20 45 L 45 5"></path>
+          </svg>
+        </label>
+        <label for="familia">&nbsp;e familia</label>
+      </div>
+    </ng-template>
+    <ng-template #loading_animation>
+      <app-loading></app-loading>
+    </ng-template>
+  </div>
+  <button class="accept" [disabled]="disableButtons">Confirmo</button>
+  <button class="regret" [disabled]="disableButtons">Não poderei ir</button>
+</form>
