@@ -1,8 +1,8 @@
 section .primary-image{
-    background: url('https://fakeimg.pl/1280x720/c4aa99/eae0d0/');
+    background: url('../../assets/talitaemateus.jpeg');
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    background-position: 0% 55%;
+    background-position: 0% 30%;
     width:100%;
     height: 400px;
 }
@@ -29,7 +29,7 @@ section .primary-image{
 
 .text-description h2{
     font-size: 25px;
-    font-family: 'josefin sans';    
+    font-family: 'josefin sans';
 }
 
 .text-description p{
@@ -52,33 +52,33 @@ section .primary-image{
       "photo4 photo4 photo4 photo4 photo4 photo4";
   }
   .photo1 {
-    grid-area: photo1;  
+    grid-area: photo1;
     background: url("https://fakeimg.pl/1280x720/f5f1ee/eae0d0/");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;  
+    background-size: cover;
   }
-  
-  .photo2 {  
+
+  .photo2 {
     grid-area: photo2;
     background: url("https://fakeimg.pl/1280x720/89807b/eae0d0/");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;  
+    background-size: cover;
   }
-  
-  .photo3 {  
-    grid-area: photo3;  
-    background: url("https://fakeimg.pl/1280x720/c4aa99/eae0d0/");  
-    background-repeat: no-repeat;  
-    background-position: center;  
-    background-size: cover;  
+
+  .photo3 {
+    grid-area: photo3;
+    background: url("https://fakeimg.pl/1280x720/c4aa99/eae0d0/");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
-  
-  .photo4 {  
-    grid-area: photo4;  
-    background: url("https://fakeimg.pl/1280x720/96887d/eae0d0/");  
-    background-repeat: no-repeat;  
-    background-position: center;  
-    background-size: cover;  
+
+  .photo4 {
+    grid-area: photo4;
+    background: url("https://fakeimg.pl/1280x720/96887d/eae0d0/");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }

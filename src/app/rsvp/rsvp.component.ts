@@ -28,11 +28,13 @@ export class RsvpComponent implements OnInit {
   enviarConfirmacao(event: {submitter: HTMLElement}){
     if(this.formPresenca.valid){
       let confirmacao = event.submitter.className === 'accept';
+      console.log(confirmacao)
       let presencaRequest: PresencaRequest = {
         nome: this.formPresenca.controls.nome.value,
         familia: this.formPresenca.controls.familia.value,
-        confirmacao        
+        confirmacao
       };
+      console.log(presencaRequest)
       this.loading = true;
       this.disableButtons = true;
       this.presencaService.confirmar(presencaRequest).subscribe((resposta)=> {
@@ -46,7 +48,6 @@ export class RsvpComponent implements OnInit {
       }
 
     }
-
   }
 
 

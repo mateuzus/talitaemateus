@@ -11,6 +11,7 @@
     <p>Igreja Nossa Senhora das Graças</p>
     <p>R. Vig. Martiniano, 288 - Centro, Guaratinguetá - SP, 12501-060</p>
     <h2>Recepção</h2>
+    <p>Spaço Vip</p>
     <p>Estr. Césare Zangrande, 2161 - Chácara São Dimas, Guaratinguetá - SP, 12513-280</p>
     <p class="line">_________________________________</p>
     <div *ngIf="loading;then loading_animation else no_loading"></div>
@@ -21,9 +22,9 @@
       <h1>{{mensagemText}}</h1>
     </ng-template>
     <ng-template #form_presenca>
-      <input type="text" formControlName="nome" placeholder="Nome">
-      <p class="error-message" *ngIf="error && formPresenca.invalid">*Nome obrigatório</p>
-      <div class="checkbox">
+      <input type="text" formControlName="nome" placeholder="Nome(s)">
+      <p class="error-message" *ngIf="error && formPresenca.invalid">*Nome obrigatório e separação de nomes por vírgula</p>
+      <!-- <div class="checkbox">
         <input type="checkbox" formControlName="familia" id="check" />
         <label class="label-check" for="check">
           <svg viewBox="0,0,50,50">
@@ -31,7 +32,7 @@
           </svg>
         </label>
         <label for="familia">&nbsp;e familia</label>
-      </div>
+      </div> -->
     </ng-template>
     <ng-template #loading_animation>
       <app-loading></app-loading>
