@@ -139,6 +139,10 @@ button:focus {
     outline: 0;
 }
 
+.detalhes {
+    font-size: 40px;
+}
+
 @media screen and (max-width: 440px) {
     form {
         width: 98%;
